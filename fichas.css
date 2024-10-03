@@ -114,6 +114,7 @@ body {
     border: 1px solid #686565;
     border-radius: 5px;
     background-image: url('./src/FESB.jpeg'); 
+    justify-content: center;
     background: size 5px; 
     background-repeat: no-repeat; 
     background-position: center; 
