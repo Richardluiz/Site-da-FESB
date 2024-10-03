@@ -1,0 +1,425 @@
+body {
+  padding-bottom: 60px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+#cssmenu {
+  background-color: #f80808;
+  /* Cor de fundo do menu */
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  /* Borda inferior do menu */
+}
+
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#cssmenu li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  /* Para posicionar a seta */
+}
+
+#cssmenu a {
+  text-decoration: none;
+  color: #f7f5f5;
+  /* Cor do texto do menu */
+  padding: 10px 30px;
+  font-weight: bold;
+  /* Texto em negrito */
+  border-radius: 10px;
+  /* Borda arredondada */
+  transition: background-color 0.3s ease;
+  /* Transição suave para o hover */
+}
+
+#cssmenu a:hover {
+  background-color: #f10707;
+  /* Cor de fundo do hover */
+  cursor: pointer;
+}
+
+/* Estilos do submenu */
+.has-submenu ul.submenu {
+  display: none;
+  /* Submenu oculto por padrão */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0a0909;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  /* Borda arredondada */
+}
+
+.has-submenu ul.submenu li {
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.has-submenu ul.submenu a {
+  font-weight: normal;
+  /* Texto normal */
+}
+
+.has-submenu ul.submenu a:hover {
+  background-color: #f0f0f0;
+  /* Cor de fundo do hover */
+}
+
+/* Estilos da seta */
+.arrow-down {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  color: #333;
+  /* Cor da seta */
+  cursor: pointer;
+  /* Muda o cursor para mão */
+}
+
+/* Estilos para quando o submenu está aberto */
+.has-submenu.open ul.submenu {
+  display: block;
+  /* Exibe o submenu */
+}
+
+.has-submenu.open .arrow-down {
+  transform: rotate(180deg);
+  /* Rotaciona a seta para cima */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Estilos para a imagem FESB */
+.LOGO img {
+  width: 150px;
+  height: 100px;
+  text-align: center;
+}
+
+.Logo2 {
+  /* Define a div Logo2 como flex container */
+  display: flex;
+  flex-grow: 1;
+  /* Expanda a div Logo2 para ocupar o espaço restante */
+  margin-left: 10px;
+  /* Adicione um espaçamento à esquerda */
+}
+
+
+.titulo-animado {
+  opacity: 0;
+  /* Inicialmente oculto */
+  animation: aparecer 2s ease-in-out forwards;
+  /* Animação "aparecer" */
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: solid;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Começa um pouco acima */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Volta para a posição normal */
+  }
+}
+
+/* Estilos para o carrossel de fotos */
+.swiper-container {
+  width: 30%;
+  height: 90px;
+  margin-left: 40%;
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  width: 60%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-width: 50%;
+  max-height: 50%;
+  justify-content: center;
+  border: solid #0a0909;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilos para a navegação do carrossel (opcional) */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
+
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-slide .description {
+  position: absolute;
+  /* Posiciona a descrição sobre a imagem */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Cor de fundo com transparência */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  /* Esconde a descrição por padrão */
+  transition: opacity 0.3s ease-in-out;
+  /* Transição suave */
+  top: 100%;
+  /* Posiciona a descrição abaixo da imagem */
+  transform: translateY(-10px);
+  /* Desloca um pouco para cima para evitar sobreposição */
+}
+
+.swiper-slide:hover .description {
+  opacity: 1;
+  /* Mostra a descrição ao passar o mouse */
+  transform: translateY(0);
+  /* Remove o deslocamento para cima */
+}
+
+.swiper-slide img {
+  /* ... outros estilos */
+  display: block;
+  /* Define a imagem como um bloco */
+  transition: transform 0.3s;
+  /* Adiciona uma transição para o hover */
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.1);
+  /* Aumenta o tamanho da imagem ao passar o mouse */
+}
+
+
+.atividades {
+  display: flex;
+  /* Define o container como flex */
+  flex-wrap: wrap;
+  /* Permite que os elementos quebrem para a próxima linha */
+  justify-content: space-around;
+  /* Distribui os elementos uniformemente com espaço entre eles */
+  margin-bottom: 20px;
+  /* Adiciona margem inferior */
+  color: white;
+}
+
+.atividade {
+  width: 150px;
+  /* Define a largura do quadrado */
+  margin: 10px;
+  /* Define a margem do quadrado */
+  border: 5px solid #ccc;
+  /* Define a borda do quadrado */
+  border-radius: 3px;
+  /* Define o arredondamento da borda */
+  text-align: center;
+  /* Centraliza o texto */
+  padding: 5px;
+  /* Define o espaçamento interno */
+}
+
+.atividade img {
+  width: 100%;
+  /* Define a largura da imagem como 100% do quadrado */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  margin-bottom: 5px;
+  /* Define a margem inferior da imagem */
+}
+
+.atividade h3 {
+  font-size: 16px;
+  /* Define o tamanho da fonte do título */
+  font-weight: bold;
+  /* Define o peso da fonte do título */
+}
+
+
+footer {
+  position: fixed;
+
+  bottom: 0;
+  
+  left: 0;
+ 
+  width: 100%;
+ 
+  background-color: #8f8989;
+  padding: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer-content a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-content img {
+  height: 40px;
+  margin: 0 10px
+}
+
+
+
+
+#Sobre {
+  display: flex;
+  justify-content: center;
+  /* Centraliza o conteúdo da seção horizontalmente */
+  flex-direction: column;
+  /* Define a direção do flexbox como coluna */
+  align-items: center;
+  /* Centraliza o conteúdo da seção verticalmente */
+  margin-top: 200px;
+  /* Adiciona uma margem superior */
+}
+
+#Trabalho {
+
+  justify-content: center;
+  /* Centraliza o conteúdo da seção horizontalmente */
+  flex-direction: column;
+  /* Define a direção do flexbox como coluna */
+  align-items: center;
+  /* Centraliza o conteúdo da seção verticalmente */
+  margin-top: 200px;
+}
+
+.Terreiro {
+  display: flex;
+  /* Define o div como um flex container */
+  flex-direction: column;
+  /* Define a direção do flexbox como coluna */
+  justify-content: center;
+  /* Centraliza o conteúdo horizontalmente */
+  align-items: center;
+  /* Centraliza o conteúdo verticalmente */
+  margin-bottom: 20px;
+  /* Adiciona espaçamento entre o div e o conteúdo abaixo */
+}
+
+.Terreiro img {
+  max-width: 100%;
+  /* Define a largura máxima da imagem como 100% do container */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  margin-bottom: 10px;
+  /* Adiciona espaçamento entre a imagem e o parágrafo */
+}
+
+
+
+
+p {
+  font-style: italic;
+  font-size: larger;
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+  color: whit
+}
+
+li {
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+h1{
+  color:white
+}
+
+.Fundo{
+  background-image: url(./src/Foto\ de\ fundo.jpeg);
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
+}
+
+
+
+ 

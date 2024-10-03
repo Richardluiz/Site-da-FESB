@@ -1,0 +1,262 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilos para a imagem FESB */
+.LOGO img {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+}
+
+.Logo2 { /* Define a div Logo2 como flex container */
+  display: flex;
+  flex-grow: 1; /* Expanda a div Logo2 para ocupar o espaço restante */
+  margin-left: 10px; /* Adicione um espaçamento à esquerda */
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+  }
+  
+  #cssmenu {
+      background-color: #f80808; /* Cor de fundo do menu */
+      padding: 10px;
+      border-bottom: 1px solid #ccc; /* Borda inferior do menu */
+    }
+    
+    #cssmenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #cssmenu li {
+      display: inline-block;
+      margin-right: 20px;
+      position: relative; /* Para posicionar a seta */
+    }
+    
+    #cssmenu a {
+      text-decoration: none;
+      color: #f7f5f5; /* Cor do texto do menu */
+      padding: 10px 30px;
+      font-weight: bold; /* Texto em negrito */
+      border-radius: 10px; /* Borda arredondada */
+      transition: background-color 0.3s ease; /* Transição suave para o hover */
+    }
+    
+    #cssmenu a:hover {
+      background-color: #f10707; /* Cor de fundo do hover */
+      cursor: pointer;
+    }
+    
+    /* Estilos do submenu */
+    .has-submenu ul.submenu {
+      display: none; /* Submenu oculto por padrão */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #0a0909;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      border-radius: 5px; /* Borda arredondada */
+    }
+    
+    .has-submenu ul.submenu li {
+      display: block;
+      margin: 0;
+      padding: 10px 15px;
+    }
+    
+    .has-submenu ul.submenu a {
+      font-weight: normal; /* Texto normal */
+    }
+    
+    .has-submenu ul.submenu a:hover {
+      background-color: #f0f0f0; /* Cor de fundo do hover */
+    }
+    
+    /* Estilos da seta */
+    .arrow-down {
+      display: inline-block;
+      margin-left: 5px;
+      vertical-align: middle;
+      color: #333; /* Cor da seta */
+      cursor: pointer; /* Muda o cursor para mão */
+    }
+    
+    /* Estilos para quando o submenu está aberto */
+    .has-submenu.open ul.submenu {
+      display: block; /* Exibe o submenu */
+    }
+    
+    .has-submenu.open .arrow-down {
+      transform: rotate(180deg); /* Rotaciona a seta para cima */
+    }
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.Fichas {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #686565;
+    border-radius: 5px;
+    background-image: url('./src/FESB.jpeg'); 
+    background: size 5px; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed;      
+}
+
+.atividades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.atividade {
+    width: calc(20% - 10px); /* Ajuste a largura */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.atividade img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.atividade h3 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.calendario-e-ficha {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.calendario {
+    width: 50%;
+    height: 400px; /* Ajuste a altura conforme necessário */
+}
+
+.ficha {
+    width: 50%;
+    padding: 20px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#lista-atividades {
+    list-style: none;
+    padding: 0;
+}
+
+#aviso-ficha {
+    color: #777;
+    margin-top: 10px;
+}
+
+#finalizar {
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.atividade.selecionada {
+    border: 2px solid #007bff; /* Azul */
+}
+
+.atividade:hover img{
+  opacity: 0.5; /* Reduz a opacidade da imagem ao passar o mouse */
+}
+.atividade:hover{
+  background-color: #575555; 
+}
+
+
+/* Estilos para a atividade selecionada */
+.atividade.selecionada {
+    border: 2px solid #007bff; 
+}
+
+.atividade a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Estilos para o FullCalendar */
+.fc-daygrid-month-view .fc-event-main {
+  /* Remove a cor do título do evento */
+  background-color: #fff; /* Cor branca, se desejar */
+  border: 1px solid #007bff; /* Adicione um contorno azul */
+  color: #007bff; /* Define a cor do título como azul */
+  padding: 4px;
+}
+
+.fc-daygrid-month-view .fc-event.selecionado { /* Estilo para evento selecionado */
+  background-color: #007bff; /* Define um fundo azul para o evento selecionado */
+  color: #fff; /* Cor branca para o título do evento selecionado */
+}
+
+.fc-daygrid-month-view .fc-event.selecionado .fc-event-title {
+  font-weight: bold;
+}
+
+footer {
+  position: fixed; /* Posiciona o footer fixo na tela */
+  bottom: 0; /* Posiciona o footer na parte inferior da tela */
+  left: 0; /* Alinha o footer à esquerda da tela */
+  width: 100%; /* Define a largura do footer como 100% da tela */
+  background-color: #8f8989;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer-content a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-content img {
+  height: 40px;
+  margin: 0 10px
+}

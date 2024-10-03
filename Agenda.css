@@ -1,0 +1,125 @@
+body {
+    background-color: #f2f2f2; 
+    /* Define uma cor de fundo para o body */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  header {
+    background-color: #f80808; 
+    /* Define a cor de fundo do header */
+    padding: 10px;
+    text-align: center; 
+    color: white;
+  }
+  
+  main {
+    width: 100%; 
+    margin: 20px auto; 
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  header button {
+    padding: 8px 15px; 
+    background-color: #ffffff; 
+    /* Define a cor de fundo do botão */
+    border: none; 
+    /* Remove a borda do botão */
+    color: #f80808;
+    /* Define a cor do texto do botão */
+    font-weight: bold;
+    /* Define a fonte do botão em negrito */
+    border-radius: 5px; 
+    /* Define a borda arredondada do botão */
+    cursor: pointer; 
+    /* Define o cursor do botão como um ponteiro */
+    text-decoration: none; 
+    /* Remove a decoração de texto do botão */
+  }
+  
+  
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+  header button:hover {
+    background-color: #ffffff; 
+    color: #f80808; 
+    /* Define a cor de fundo e a cor do texto do botão ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s;
+    /* Adicione uma transição suave */
+  }
+  
+  .calendario {
+    width: 80%;
+    margin: 20px auto; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adicione uma sombra suave */
+    padding: 20px;
+    border-radius: 10px;
+    /* Arredonde as bordas do container do calendário */
+    background-color: #ffffff;
+    /* Define uma cor de fundo para o container do calendário */
+    
+  }
+  .calendario-mes{
+    background-color: #f80808;
+    /* Define a cor de fundo do header */
+    padding: 10px;
+    text-align: center; 
+    color: white;
+  }
+  
+  /* Styles da table*/
+  table {
+    width: 100%;
+    margin-top: 20px; 
+    border-collapse: collapse; 
+    /* Remove a borda dos elementos da table */
+    border: 1px solid #eee; 
+    /* Adiciona borda a todo elemento da table*/ 
+  }
+  
+  th, 
+  td {
+    text-align: center; 
+    padding: 8px; 
+    border: 1px solid #eee; 
+    /* Define os estilos da tabela (cor da borda, padding e largura das células)*/ 
+    font-size: 14px;
+    color: black;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+    /* Define a cor de fundo para o cabeçalho da tabela */
+    font-weight: bold;
+  }
+  
+  td {
+    width: 14.28%; /* Define a largura de cada célula como 1/7 da tabela */
+    position: relative;
+    cursor: pointer;
+  }
+  
+  
+  caption {
+    padding: 10px 0;
+    font-size: 1.2em; 
+    font-weight: bold;
+    color: black;
+  }
+  
+  
+  .evento {
+    font-size: 0.9em; 
+    font-style: italic; 
+    color: green;
+    
+    display: block;
+   
+    text-align: center;
+  }
+  
+  
+ 

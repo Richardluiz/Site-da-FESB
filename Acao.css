@@ -1,0 +1,237 @@
+body{
+  padding-bottom: 60px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+}
+
+#cssmenu {
+    background-color: #f80808; /* Cor de fundo do menu */
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Borda inferior do menu */
+  }
+  
+  #cssmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #cssmenu li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative; /* Para posicionar a seta */
+  }
+  
+  #cssmenu a {
+    text-decoration: none;
+    color: #f7f5f5; /* Cor do texto do menu */
+    padding: 10px 30px;
+    font-weight: bold; /* Texto em negrito */
+    border-radius: 10px; /* Borda arredondada */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+  }
+  
+  #cssmenu a:hover {
+    background-color: #f10707; /* Cor de fundo do hover */
+    cursor: pointer;
+  }
+  
+  /* Estilos do submenu */
+  .has-submenu ul.submenu {
+    display: none; /* Submenu oculto por padrão */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0a0909;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 5px; /* Borda arredondada */
+  }
+  
+  .has-submenu ul.submenu li {
+    display: block;
+    margin: 0;
+    padding: 10px 15px;
+  }
+  
+  .has-submenu ul.submenu a {
+    font-weight: normal; /* Texto normal */
+  }
+  
+  .has-submenu ul.submenu a:hover {
+    background-color: #f0f0f0; /* Cor de fundo do hover */
+  }
+  
+  /* Estilos da seta */
+  .arrow-down {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: #333; /* Cor da seta */
+    cursor: pointer; /* Muda o cursor para mão */
+  }
+  
+  /* Estilos para quando o submenu está aberto */
+  .has-submenu.open ul.submenu {
+    display: block; /* Exibe o submenu */
+  }
+  
+  .has-submenu.open .arrow-down {
+    transform: rotate(180deg); /* Rotaciona a seta para cima */
+  }
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilos para a imagem FESB */
+.LOGO img {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+}
+
+.Logo2 { /* Define a div Logo2 como flex container */
+  display: flex;
+  flex-grow: 1; /* Expanda a div Logo2 para ocupar o espaço restante */
+  margin-left: 10px; /* Adicione um espaçamento à esquerda */
+}
+
+
+.titulo-animado {
+  opacity: 0; /* Inicialmente oculto */
+  animation: aparecer 2s ease-in-out forwards; /* Animação "aparecer" */
+  text-align: center;
+  margin-bottom: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: solid;
+}
+
+@keyframes aparecer {
+  from {
+      opacity: 0;
+      transform: translateY(-20px); /* Começa um pouco acima */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0); /* Volta para a posição normal */
+  }
+}
+
+.swiper-container {
+  width: 100%; /* Ajuste a largura para 100% */
+  height: 300px; /* Ajuste a altura do carrossel */
+  margin: 20px auto; /* Centraliza o carrossel */
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  width: 25%; /* Cada slide ocupará 25% da largura */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px; /* Adiciona espaçamento entre os slides */
+}
+
+.swiper-slide img {
+  max-width: 60%; /* Reduz a largura da imagem para que caiba no slide */
+  max-height: 60%;
+  border: solid #0a0909;
+}
+
+footer {
+  position: fixed; /* Posiciona o footer fixo na tela */
+  bottom: 0; /* Posiciona o footer na parte inferior da tela */
+  left: 0; /* Alinha o footer à esquerda da tela */
+  width: 100%; /* Define a largura do footer como 100% da tela */
+  background-color: #8f8989;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer-content a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-content img {
+  height: 40px;
+  margin: 0 10px
+}
+
+
+
+
+p{
+  font-style: italic;
+  font-size: larger;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 5px;
+   margin-top: 10px;
+}
+
+h1{
+  text-align: center;
+   margin-bottom: 5px;
+   margin-top: 10px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+li{
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#Sobre{
+  padding-bottom: 250px;
+}
+
+.Fundo{
+  background-image: url(./src/src/Gentileza\ bem.png);
+  background-repeat: no-repeat;
+  background-position: center 40px ;
+  background-size: cover;
+}

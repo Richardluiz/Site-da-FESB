@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fichas FESB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css">
+    <link rel="stylesheet" href="fichas.css">
+    <link rel="shortcut icon" href="./src/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="LOGO">
+            <img src="./src/FESB.jpeg" alt="fesb">
+        </div>
+        <div class="Logo2">
+            <img src="./src/src/Fesb nome.jpeg" alt="fb">
+        </div>
+    </header>
+    <nav>
+        <div id="cssmenu">
+            <ul>
+                
+                <li class="has-submenu">
+                    <a href="Agenda.html">AGENDA</a>
+                    <span class="arrow-down">▼</span>
+                    <ul class="submenu">
+
+                        <li><a href="Agenda.html">Ano</a></li>
+                        </a>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#Divulgacao">DIVULGAÇÃO</a>
+                    <span class="arrow-down">▼</span>
+                    <ul class="submenu">
+                        <li><a href="CampanhaQuilo.html">Campanha</a></li>
+                        <li><a href="Acao.html">Ação</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="fichas.html">FICHAS</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="Fichas">
+            <h2>Fichas para usuários</h2>
+            <h5>Essas fichas servem somente para o dia de atendimento dos trabalhos</h5>
+            <h4>Obs: Quando for escolher as atividades, escolha somente duas atividades e quando for escolher clique na atividade que desejar na agenda.</h4>
+
+            <div class="atividades">
+                <div class="atividade" data-atividade="cirurgia-espiritual">
+                    <img src="./src/Cirurgia espiritual.webp" alt="Cirurgia Espiritual">
+                    <h3>Cirurgia Espiritual</h3>
+                </div>
+                <div class="atividade" data-atividade="reiki">
+                    <img src="./src/reiki.jpg" alt="Reiki">
+                    <h3>Reiki</h3>
+                </div>
+                <div class="atividade" data-atividade="quilopraxia">
+                    <img src="./src/Quilopraxia.webp" alt="Quilopraxia">
+                    <h3>Quilopraxia</h3>
+                </div>
+                <div class="atividade" data-atividade="energizacao">
+                    <img src="./src/Energização.gif" alt="Energização">
+                    <h3>Energização</h3>
+                </div>
+                <div class="atividade" data-atividade="equilibrio-chakras">
+                    <img src="./src/Equilibrio dos chkras.webp" alt="Equilíbrio dos chakras">
+                    <h3>Equilíbrio dos chakras</h3>
+                </div>
+            </div>
+
+            <div class="calendario-e-ficha">
+                <div id="calendario" class="calendario"></div>
+                <div class="ficha">
+                    <h2>Sua Ficha:</h2>
+                    <p id="aviso-ficha">Selecione duas atividades na agenda.</p>
+                    <ul id="lista-atividades"></ul>
+                    <button id="finalizar" disabled>Finalizar</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-content">
+                <a href="mailto:fesbminasgerais@gmail.com">
+                    <img src="./src/gmail.png" alt="Gmail">
+                </a>
+                <a href="https://www.instagram.com/fesb_mg/" target="_blank">
+                    <img src="./src/Instgrusddxc.png" alt="Instagram">
+
+                </a>
+            </div>
+            <div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Hélia+Ricaldoni+de+Freitas,+1004+-+Serrano"
+                    target="_blank">
+                    <img src="./src/Maps.png" alt="Google Maps">
+                </a>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+    <script src="ficha.js"></script>
+</body>
+
+</html>
