@@ -33,7 +33,30 @@ document.addEventListener('DOMContentLoaded', function () {
           end: '2024-09-02T23:00:00' 
         },
         {
-          title: 'Quilopraxia',
+          title: 'Quiropraxia',
+          start: '2024-10-06T20:00:00',
+          end: '2024-10-06T23:00:00'
+        },
+        
+        {
+         title: 'Suporte Emocional',
+          start: '2024-10-03T20:00:00',
+          end: '2024-10-03T23:00:00',
+        },
+
+        {
+          title: 'Cirurgia Espiritual',
+          start: '2024-10-05T20:00:00', // Define o início e fim do evento "Cirurgia Espiritual"
+          end: '2024-10-05T23:00:00' 
+        },
+        {
+          title: 'Energização',
+          start: '2024-10-04T20:00:00',
+          end: '2024-10-04T23:00:00'
+        },
+        
+        {
+          title: 'Quiropraxia',
           start: '2024-09-01T18:00:00',
           end: '2024-09-01T23:00:00' 
         }
@@ -163,26 +186,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('DOMContentLoaded', function() {
       const submenus = document.querySelectorAll('.has-submenu');
-    
+
       // Função para alternar a classe "open" no submenu
       function toggleSubmenu(submenu) {
         submenu.classList.toggle('open');
       }
-    
+
       // Adiciona evento de clique para cada seta do submenu
       submenus.forEach(submenu => {
         const arrow = submenu.querySelector('.arrow-down');
-    
+
         // Verifica se a seta foi encontrada
         if (arrow) {
           arrow.addEventListener('click', () => toggleSubmenu(submenu));
         }
       });
     });
-    
+
     const setaFlutuante = document.querySelector('.seta-flutuante');
     const footer = document.querySelector('footer');
-    
+
     setaFlutuante.addEventListener('click', function() {
       footer.classList.toggle('show');
     });
