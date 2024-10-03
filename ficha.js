@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         {
           title: 'Quiropraxia',
-          start: '2024-09-01T18:00:00',
+          start: '2024-09-01T19:00:00',
           end: '2024-09-01T23:00:00' 
         }
 
